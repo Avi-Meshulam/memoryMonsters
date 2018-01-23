@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Memory Monsters</title>
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/game.css" />
+</head>
+
+<body>
+  <div class="header">
+    <img class="align-left" src="img/layout/logoLeft.png">
+    <h1 class="title">Memory Monsters</h1>
+    <img class="align-right" src="img/layout/logoRight.png">
+  </div>
+
+  <span id="elBestScore"></span>
+  <span id="elTimer" class="align-right">00:00:00</span>
+
+  <div id="elControlsPanel" class="panel">
+    <button id="btnSettings" class="image-button" onclick="game.setView(game.ViewType.Settings)">
+      <img src="img/layout/settings.png" alt="Settings" title="Settings">
+    </button>
+    <button id="btnPause" class="image-button" onclick="game.pause()">
+      <img src="img/layout/pause.png" alt="Pause" title="Pause">
+    </button>
+    <button id="btnPlay" class="image-button" onclick="game.play()">
+      <img src="img/layout/play.png" alt="Play" title="Play">
+    </button>
+    <button id="btnRestart" class="image-button" onclick="game.restart()">
+      <img src="img/layout/restart.png" alt="Restart" title="Restart">
+    </button>
+  </div>
+
+  <div id="elSettingsPanel" class="panel">
+    <div>
+      <div class="label">Your Name:</div>
+      <input type="text" id="txtPlayerName" oninput="game.playerNameChanged()" autofocus>
+    </div>
+
+    <div>
+      <div class="label">Number of Rows/Columns <span></span>(2,4,6,8): </div>
+      <input type="number" id="txtBoardSize" value="2" step="2" oninput="game.boardSizeChanged()" />
+    </div>
+
+    <input type="button" id="btnStart" value="Start" onclick="game.new()" />
+  </div>
+
+  <div id="elBestScorePanel" class="panel">
+    <h2>New High Score!!!</h2>
+    <table id="elBestScoreTable">
+      <th>Board Size</th>
+      <th>Score</th>
+      <th>Player</th>
+    </table>
+    <input type="button" id="btnReturn" value="Return" onclick="game.setView(game.ViewType.Board)" />
+  </div>
+
+  <div id="elBoardPanel" class="panel"></div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/game.js"></script>
+</body>
+
+</html>

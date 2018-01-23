@@ -1,0 +1,55 @@
+table{
+    border: 1px solid;
+    border-radius: 5px;
+    border-spacing: 0;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+}
+
+button.image-button:hover {
+    cursor: pointer;
+}
+
+.image-button {
+    border: 0;
+    width: 40px;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.image-button img {
+    width: 100%;
+    float: left;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.image-link {
+    text-decoration: none;
+}
+
+.align-center {
+    position: relative;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
+}
+
+.margin_bottom_none {
+    margin-bottom: 0;
+}

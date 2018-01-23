@@ -1,0 +1,97 @@
+body{
+    font-family: Tahoma;
+    color: indigo;
+}
+
+input[type='text'], input[type='number'] {
+    background-color: lightyellow;
+}
+
+input[type='button'] {
+    border-radius: 5px;
+    width: 80px;
+    height: 25px;
+    margin: 20px;
+}
+
+.header {
+    background-color: lightblue;
+    padding: 20px;
+    border-bottom: 10px solid;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .header img {
+        display: none;
+    }
+}
+
+.title {
+    display:inline-block;
+}
+
+.label {
+    margin: 20px;
+}
+
+.panel {
+    width: fit-content;
+    margin: auto;
+    border: solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.flip-container {
+    perspective: 1000px;
+    float: left;
+    margin: 5px;
+}
+
+.card {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.flip-container.flipped .card {
+	transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+    left: 0;
+}
+
+.card-front {
+    background-color: lightgreen;
+    transform: rotateY(180deg); /* initially hidden */
+}
+
+.card-back {
+	z-index: 2; /* ensure top position */
+	transform: rotateY(0deg);   /* for firefox 31 */
+}
+
+#elSettingsPanel {
+	margin-top: 30px;
+}
+
+#elControlsPanel, #elBoardPanel, #elBestScorePanel {
+    border: none;
+}
+
+#btnPause {
+    position: absolute;
+}
