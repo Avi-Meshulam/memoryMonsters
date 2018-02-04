@@ -1,4 +1,5 @@
 # Memory Monsters
+### Cards memory game with HTML5, CSS3 and JavaScript
 		
 ![Memory Monsters](https://github.com/PrisonerM13/memoryMonsters/blob/master/gif/MemoryMonsters.gif "Memory Monsters")
 
